@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style>
+.card{border:1px solid #ddd; border-radius:12px; padding:16px; margin-bottom:12px; font-family:Arial}
+.spinner{width:30px; height:30px; border:3px solid #eee; border-top:3px solid #111; border-radius:50%; animation:girar 1s linear infinite}
+@keyframes girar{to{transform:rotate(360deg)}}
+.skeleton{height:80px; background:linear-gradient(90deg,#eee 25%, #ddd 50%, #eee 75%); background-size:200% 100%; animation:brilho 1.5s infinite; border-radius:8px}
+@keyframes brilho{to{background-position:-200% 0}}
+.pulso{width:30px; height:30px; background:#ffb3b3; border-radius:50%; display:flex; align-items:center; justify-content:center}
+.pulso:after{content:''; width:14px; height:14px; background:red; border-radius:50%; animation:pulsar 1.2s infinite}
+@keyframes pulsar{0%,100%{transform:scale(.8)}50%{transform:scale(1.2)}}
+</style></head><body>
+  <h1> Animações de carregamento</h1>
+<div class="card"><strong>Spinner</strong><br><br><div class="spinner"></div></div>
+<div class="card"><strong>Esqueleto</strong><br><br><div class="skeleton"></div></div>
+<div class="card"><strong>Notificação</strong><br><br><div class="pulso"></div></div>
+</body></html>
